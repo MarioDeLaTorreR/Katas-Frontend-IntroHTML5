@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pastelería Lunita</title>
+        <link rel="stylesheet" type="text/css" href="pasteleria.css"/>
+    </head>
+    <body>
+        <header>
+            <h1>Crea tu pedido de pasteles</h1>
+        </header>
+        <main>
+            <h2>Peronaliza Tu Pastel</h2>
+
+            <form action="pedido.js">
+                <p>Favor de Ingresar sus datos</p>
+                <label for="nombre">Nombre(s)</label><br/>
+                <input type="text" id="nombre" placeholder="Nombre"> <br/><br/>
+                <label for="apellido">Apellidos</label><br/>
+                <input type="text" id="apellido" placeholder="Apellidos"><br/><br/>
+                <label for="tel">Numero Telefonico</label><br/>
+                <input type="tel" id="tel" placeholder="Telefono" minlength="10" maxlength="10"><br/><br/>
+                <label for="email">E-mail</label><br/>
+                <input type="email" id="email" placeholder="E-mail"><br/><br/>
+                <label for="descripcion">Descripcion general del pastel</label><br/>
+                <textarea id="descripcion" placeholder="Descripcion"></textarea>
+
+                <fieldset title="Pedido" >
+
+                    <p>Escoge El Sabor de Tu Pastel:</p>
+
+                    <input type="radio" id="vainilla" name="Sabor" value="Vainilla">
+                    <label for="vainilla">Vainilla</label><br/>
+                    <input type="radio" id="Chocolate" name="Sabor" value="Chocolate">
+                    <label for="Chocolate">Chocolate</label><br/>
+                    <input type="radio" id="CajetaNuez" name="Sabor" value="CajetaNuez">
+                    <label for="CajetaNuez"></label>Cajeta con Nuez<br/>
+                    <input type="radio" id="RedVelvet" name="Sabor" value="RedVelvet">
+                    <label for="RedVelvet">Red Velvet</label><br/>
+                    <input type="radio" id="Zanahoria" name="Sabor" value="Zanahoria">
+                    <label for="Zanahoria">Zanahoria</label><br/>
+                    <input type="radio" id="TresLeches" name="Sabor" value="TresLeches">
+                    <label for="TresLeches">Tres Leches</label><br/>
+                    
+                    <p>Escoge La Cubierta de Tu Pastel:</p>
+
+                    <input type="radio" id="cremabatida" name="cubierta" value="cremabatida">
+                    <label for="cremabatida">Crema Batida</label><br/>
+                    <input type="radio" id="choco" name="cubierta" value="choco">
+                    <label for="choco">Chocolate</label><br/>
+                    <input type="radio" id="fondan" name="cubierta" value="fondan">
+                    <label for="fondan"></label>Fondan<br/>
+                    <input type="radio" id="Espejo" name="cubierta" value="Espejo">
+                    <label for="Espejo">Glaseado Espejo</label><br/>
+
+                    <p>Escoge el Relleno de Tu Pastel:</p>
+
+                    <input type="radio" id="rellenoCremabatida" name="relleno" value="rellenoCremabatida">
+                    <label for="vrellenoCremabatida">Crema Batida</label><br/>
+                    <input type="radio" id="rellenoChoco" name="relleno" value="rellenoChoco">
+                    <label for="rellenoChoco">Chocolate</label><br/>
+                    <input type="radio" id="rellenoCajetaNuez" name="relleno" value="rellenoCajetaNuez">
+                    <label for="rellenoCajetaNuez"></label>Cajeta con Nuez<br/>
+                    <input type="radio" id="rellenoFrutos" name="relleno" value="rellenoFrutos">
+                    <label for="rellenoFrutos">Frutos</label>
+                    <select name="fruta" id="frutaRelleno">
+                        <option value="ninguno">Ninguno</option>
+                        <option value="fresa">Fresa</option>
+                        <option value="kiwi">Kiwi</option>
+                        <option value="durazno">Durazno</option>
+                        <option value="mango">Mango</option>
+                    </select>
+                    <br/>
+
+                    <p>Escoge los Toppings de Tu Pastel:</p>
+
+                    <input type="checkbox" id="tfresa" name="tfresa" value="tfresa">
+                    <label for="tfresa">Fresa</label><br/>
+                    <input type="checkbox" id="tkiwi" name="tkiwi" value="tkiwi">
+                    <label for="tkiwi">Kiwi</label><br/>
+                    <input type="checkbox" id="tmango" name="tmango" value="tmango">
+                    <label for="tmango">Mango</label><br/>
+                    <input type="checkbox" id="tdurazno" name="tdurazno" value="tdurazno">
+                    <label for="tdurazno">Durazno</label><br/>
+                    <input type="checkbox" id="tcereza" name="tcereza" value="tcereza">
+                    <label for="tcereza">Cereza</label><br/>
+                    <input type="checkbox" id="tnuez" name="tnuez" value="tnuez">
+                    <label for="tnuez">Nuez</label><br/>
+                    <input type="checkbox" id="tchispaschocolate" name="tchispaschocolate" value="tchispaschocolate">
+                    <label for="tchispaschocolate">Chispas de Chocolate</label><br/>
+                    <input type="checkbox" id="tferrero" name="tferrero" value="tferrero">
+                    <label for="tferrero">Ferrero</label><br/>
+                    <input type="checkbox" id="tgalletaoreo" name="tgalletaoreo" value="tgalletaoreo">
+                    <label for="tgalletaoreo">Galleta Oreo</label><br/>
+
+                    <p>Escoge el adorno para tu pastel:</p>
+                    <input type="radio" id="adornoVelaMagica" name="adorno" value="adornoVelaMagica">
+                    <label for="adornoVelaMagica">Vela Magica</label><br/>
+                    <input type="radio" id="adornoVelaFelizCumpleaños" name="adorno" value="adornoVelaFelizCumpleaños">
+                    <label for="adornoVelaFelizCumpleaños">Vela "Feliz Cumpleaños"</label><br/>
+                    <input type="radio" id="adornoVelaChispas" name="adorno" value="adornoVelaChispas">
+                    <label for="adornoVelaChispas">Vela de Chispas</label><br/>
+                    <input type="radio" id="adornoVelaMusical" name="adorno" value="adornoVelaMusical">
+                    <label for="adornoVelaMusical">Vela Musical</label><br/>
+                    <br/>
+
+                </fieldset>
+            <input type="reset">
+            <input type="submit">
+            <a href="./pasteleria.html"><input type="button" value="Regresar al menu"></a>
+            <br/><br/>
+            </form>
+        </main>
+        <footer>
+            <p>Todos los derechos reservados Pastelería Lunita &copy;2022</p>
+        </footer>
+
+    </body>
+</html>
